@@ -9,7 +9,11 @@ const listenSocket = (io) => io.on('connection', (socket) => {
 })
 
 const pushSocket = (data) => {
-    ioGlobal.to('global').emit('data', data);
+    try {
+        ioGlobal.to('global').emit('data', data);
+    } catch (e) {
+        return null
+    }
 }
 
 module.exports = { listenSocket, pushSocket }
