@@ -1,0 +1,23 @@
+{
+  "name": "node-seed-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "expeditious-engine-redis": "^0.1.2",
+    "express": "^4.17.1",
+    "express-expeditious": "^5.1.1",
+    "mongoose": "^5.13.3",
+    "nodemon": "^2.0.12",
+    "response-time": "^2.3.2",
+    "socket.io": "^4.1.3"
+  }
+}
