@@ -7,7 +7,7 @@ const { dbConnect } = require('./config/mongo')
 const { listenSocket } = require('./app/services/socket')
 const io = require('socket.io')(server, {
     cors: {
-        origins: ['http://192.168.1.138:4200', 'http://localhost:4200']
+        origins: ['http://192.168.1.138:4200', 'http://localhost:4200', 'https://priceless-minsky-3d4147.netlify.app']
     }
 })
 
