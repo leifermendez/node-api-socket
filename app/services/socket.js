@@ -1,6 +1,7 @@
 var ioGlobal
 
 const listenSocket = (io) => io.on('connection', (socket) => {
+    console.log('Here')
     ioGlobal = io;
     socket.join('global');
     console.log('Join');
