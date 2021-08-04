@@ -7,7 +7,7 @@ const { dbConnect } = require('./config/mongo')
 const { listenSocket } = require('./app/services/socket')
 const io = require('socket.io')(server, {
     cors: {
-        origins: ['http://localhost:4200']
+        origins: ['*']
     }
 })
 
