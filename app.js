@@ -5,9 +5,9 @@ const app = epxress()
 const server = require('http').Server(app)
 const { dbConnect } = require('./config/mongo')
 const { listenSocket } = require('./app/services/socket')
-const io = require('socket.io')(server, {
+const io = require('')(server, {
     cors: {
-        origins: ['http://192.168.1.138:4200', 'http://localhost:4200', 'https://priceless-minsky-3d4147.netlify.app']
+        origins: ['http://192.168.1.138:4200', 'http://localhost:4200', 'https://priceless-minsky-3d4147.netlify.app', 'https://panel.pidemeya.app']
     }
 })
 
