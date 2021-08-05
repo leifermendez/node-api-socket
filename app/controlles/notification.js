@@ -4,6 +4,7 @@ const leadsModel = require('../models/leads')
 const leadsLogModel = require('../models/userLog')
 const groupModel = require('../models/group')
 const groupLogModel = require('../models/groupLog')
+const errorsModel = require('../models/errors')
 
 
 const getTotalLeads = async () => {
@@ -183,4 +184,17 @@ const createItem = async (req, res) => {
     }
 }
 
-module.exports = { createItem }
+
+const getItems = async (req, res) => {
+    try {
+        const listAll = await errorsModel.find({}, null, {
+            sort: { updatedAt: -1 }, limit: 35
+        })
+
+        res.send({ data: listAll })
+
+    } catch (e) {
+        httpError(res, e)
+    }
+}
+module.exports = { createItem, getItems }
